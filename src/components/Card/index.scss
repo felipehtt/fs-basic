@@ -1,0 +1,28 @@
+.comp-card {
+
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 255px;
+    height: 208px;
+    padding-top: 30px;
+
+    .cores {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        padding-top: 54px;
+        margin-left: 100px;
+
+    }
+
+    h3 {
+        margin-top: 18px;
+    }
+
+    p {
+        margin-top: 25px;
+    }
+
+}
