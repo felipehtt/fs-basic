@@ -3,18 +3,19 @@ import './index.scss'
 import { useState } from 'react'
 import Cabecalho from '../../components/Cabecalho'
 
+import { tratarNumero } from '../../utils/pontoVirgula'
+import { kgEmGramas } from '../../services/kg'
+
 export default function Exer2() {
 
-    const [Vgramas, setVgramas] = useState(0);
+    const [valorKg, setValorKg] = useState(0);
     const [resultado, setResultado] = useState(0);
 
     function KgEmGramas() {
 
-        let kg = Vgramas * 1000
+        let res = kgEmGramas(valorKg)
 
-        setResultado(Number(kg))
-
-        return setResultado
+        return setResultado(res)
 
     }
 
@@ -47,7 +48,7 @@ export default function Exer2() {
 
                     <h3>Valor em kilos</h3>
 
-                    <input type="text" value={Vgramas} onChange={e => setVgramas(e.target.value)} />
+                    <input type="text" value={valorKg} onChange={e => setValorKg(e.target.value)} />
 
                     <button onClick={KgEmGramas}>Executar</button>
 
